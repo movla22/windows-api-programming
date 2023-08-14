@@ -1,6 +1,6 @@
-# This program emulates the file listing style of the Windows Command Prompt (CMD) using the Windows API. 
-# It retrieves file and directory information and prints it in a format similar to CMD's listing. 
-# The code showcases how to work with file attributes and time conversion in Windows programming.
+// This program emulates the file listing style of the Windows Command Prompt (CMD) using the Windows API. 
+// It retrieves file and directory information and prints it in a format similar to CMD's listing. 
+// The code showcases how to work with file attributes and time conversion in Windows programming.
 
 
 #include <stdio.h>
