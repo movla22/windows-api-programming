@@ -1,0 +1,41 @@
+01.c | CreateFile
+
+#include <windows.h>
+#include <stdio.h>
+
+int main() {
+    HANDLE hFile;
+
+    hFile = CreateFile("sample.txt", GENERIC_READ | GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+
+    if(hFile == INVALID_HANDLE_VALUE){
+        printf("Dosya acilamadi\n");
+        return 1;
+    }
+
+    printf("Dosya acildi.\n");
+    CloseHandle(hFile);
+    return 0;
+}
+
+
+02.c | DeleteFile
+
+#include <windows.h>
+#include <stdio.h>
+
+int main() {
+   
+	// If the function succeeds, the return value is nonzero.
+    int res = DeleteFile("sample.txt");
+
+	if (res != 0) {
+		printf("File deleted successfully\n");
+	}
+	else {
+		printf("Error deleting file\n");
+	}	
+    return 0;
+}
+
+
